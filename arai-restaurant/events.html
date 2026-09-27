@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/dilnaz.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Events and booking information for Arai Restaurant in Satpayev.">
     <meta name="author" content="Balymbetova Dilnaz">
+
     <title>Arai Restaurant | Events & Booking</title>
+
+    <!-- Bootstrap 5.3.8 is used for responsive layout and components. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Custom CSS is loaded after Bootstrap for brand corrections. -->
+    <link rel="stylesheet" href="css/dilnaz.css">
 </head>
 
 <body>
@@ -15,222 +22,555 @@
     <!-- Author: Balymbetova Dilnaz, SE-2537 -->
 
     <header>
-        <h1>Events & Booking</h1>
-        <p>Plan your celebration at Arai Restaurant</p>
 
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events & Booking</a></li>
-                <li><a href="#booking">Booking Form</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <!-- Bootstrap Navbar component adapted for Arai Restaurant.
+             It collapses below the md breakpoint for phone screens. -->
+        <nav class="navbar navbar-expand-md navbar-dark arai-navbar">
+            <div class="container">
+
+                <a class="navbar-brand fw-bold" href="index.html">
+                    Arai Restaurant
+                </a>
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                               aria-current="page"
+                               href="events.html">Events & Booking</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="#booking">Booking Form</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="#contact">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
         </nav>
+
+
+        <!-- container-fluid allows the hero background to span
+             the full viewport width. -->
+        <div class="container-fluid arai-hero">
+            <div class="container text-center py-5">
+
+                <h1 class="display-4 fw-bold">
+                    Events & Booking
+                </h1>
+
+                <p class="lead mb-2">
+                    Plan your celebration at Arai Restaurant
+                </p>
+
+                <!-- Responsive display utility:
+                     hidden on phones and visible from md upwards. -->
+                <p class="small mb-0 d-none d-md-block">
+                    Prepare your event details before contacting
+                    the restaurant.
+                </p>
+
+            </div>
+        </div>
+
     </header>
+
 
     <main>
 
-        <section id="events">
-            <h2>Celebrate at Arai</h2>
+        <!-- EVENTS -->
+        <section id="events" class="container py-5">
 
-            <figure>
-                <img src="images/arai-hall-3.jpg"
-                     alt="Decorated event hall at Arai Restaurant"
-                     width="600">
-                <figcaption>The event hall at Arai Restaurant</figcaption>
-            </figure>
+            <div class="row g-4 align-items-center">
 
-            <p>
-                Arai Restaurant has a spacious indoor hall that can be used
-                for different celebrations and gatherings. The room includes
-                guest tables and a large central area. Decorative chandeliers,
-                ceiling details and lighting help create an atmosphere suitable
-                for special occasions.
-            </p>
+                <div class="col-12 col-lg-6">
 
-            <p>
-                Every event can have different requirements, including the
-                number of guests, date and table arrangement. For this reason,
-                visitors should contact the restaurant directly to discuss
-                current availability and details. The form below can be used
-                as an example booking request for this website project.
-            </p>
+                    <figure class="mb-0">
+                        <img src="images/arai-hall-3.jpg"
+                             class="img-fluid rounded shadow"
+                             alt="Decorated event hall at Arai Restaurant">
+
+                        <figcaption class="small text-body-secondary mt-2">
+                            The event hall at Arai Restaurant
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+
+                <div class="col-12 col-lg-6">
+
+                    <h2 class="display-6 text-center text-lg-start">
+                        Celebrate at Arai
+                    </h2>
+
+                    <p class="lead">
+                        A spacious indoor venue for gatherings and
+                        special occasions.
+                    </p>
+
+                    <p>
+                        Arai Restaurant has a spacious indoor hall that can
+                        be used for different celebrations and gatherings.
+                        The room includes guest tables and a large central
+                        area. Decorative chandeliers, ceiling details and
+                        lighting help create an atmosphere suitable for
+                        special occasions.
+                    </p>
+
+                    <p class="mb-0">
+                        Every event can have different requirements,
+                        including the number of guests, date and table
+                        arrangement. Visitors should contact the restaurant
+                        directly to discuss current availability and details.
+                    </p>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <section id="planning">
-            <h2>Event Planning</h2>
 
-            <h3>Information to Prepare</h3>
+        <!-- EVENT PLANNING -->
+        <section id="planning" class="container py-5">
 
-            <ul>
-                <li>Preferred event date</li>
-                <li>Estimated number of guests</li>
-                <li>Type of celebration</li>
-                <li>Contact information</li>
-            </ul>
+            <div class="text-center mb-4">
+                <h2 class="display-6">Event Planning</h2>
 
-            <h3>How to Start</h3>
+                <p class="text-body-secondary">
+                    Prepare the basic details before making a request.
+                </p>
+            </div>
 
-            <ol>
-                <li>Choose your preferred date.</li>
-                <li>Estimate how many guests will attend.</li>
-                <li>Complete the booking request below.</li>
-                <li>Contact the restaurant to confirm the details.</li>
-            </ol>
+
+            <!-- Responsive Bootstrap grid:
+                 1 column on phones, 2 on tablets, 4 on large screens. -->
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge text-bg-secondary mb-3">
+                                1
+                            </span>
+
+                            <h3 class="h5 card-title">
+                                Choose a Date
+                            </h3>
+
+                            <p class="card-text text-body-secondary">
+                                Decide which date would be suitable
+                                for your celebration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge text-bg-secondary mb-3">
+                                2
+                            </span>
+
+                            <h3 class="h5 card-title">
+                                Estimate Guests
+                            </h3>
+
+                            <p class="card-text text-body-secondary">
+                                Prepare an approximate number of people
+                                who will attend.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge text-bg-secondary mb-3">
+                                3
+                            </span>
+
+                            <h3 class="h5 card-title">
+                                Event Type
+                            </h3>
+
+                            <p class="card-text text-body-secondary">
+                                Decide what type of celebration you
+                                are planning.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge text-bg-secondary mb-3">
+                                4
+                            </span>
+
+                            <h3 class="h5 card-title">
+                                Contact Arai
+                            </h3>
+
+                            <p class="card-text text-body-secondary">
+                                Contact the restaurant to confirm
+                                availability and arrangements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </section>
 
-        <section id="booking">
-            <h2>Booking Request</h2>
 
-            <p>
-                Complete the form with your event information.
-                A booking is not confirmed until the restaurant is contacted
-                directly.
-            </p>
+        <!-- BOOKING -->
+        <section id="booking" class="container py-5">
 
-            <!-- This form has no server-side processing yet.
-                 It demonstrates the HTML form required for the project. -->
-            <form action="#" method="post">
+            <div class="row justify-content-center">
 
-                <fieldset>
-                    <legend>Contact Information</legend>
+                <div class="col-12 col-lg-9">
 
-                    <p>
-                        <label for="full-name">Full name:</label><br>
-                        <input type="text"
-                               id="full-name"
-                               name="full-name"
-                               placeholder="Your full name"
-                               required>
-                    </p>
+                    <div class="text-center mb-4">
+                        <h2 class="display-6">Booking Request</h2>
 
-                    <p>
-                        <label for="email">Email:</label><br>
-                        <input type="email"
-                               id="email"
-                               name="email"
-                               placeholder="name@example.com"
-                               required>
-                    </p>
+                        <p class="lead">
+                            Complete the form with your event information.
+                        </p>
 
-                    <p>
-                        <label for="phone">Phone number:</label><br>
-                        <input type="tel"
-                               id="phone"
-                               name="phone"
-                               placeholder="+7 777 000 0000"
-                               required>
-                    </p>
-                </fieldset>
+                        <p class="small text-body-secondary">
+                            This form demonstrates the website interface.
+                            A booking is not confirmed until the restaurant
+                            is contacted directly.
+                        </p>
+                    </div>
 
-                <fieldset>
-                    <legend>Event Details</legend>
 
-                    <p>
-                        <label for="event-date">Preferred date:</label><br>
-                        <input type="date"
-                               id="event-date"
-                               name="event-date"
-                               required>
-                    </p>
+                    <!-- This form has no server-side processing.
+                         It demonstrates the booking interface for the project. -->
+                    <form action="#"
+                          method="post"
+                          class="border rounded shadow-sm p-4">
 
-                    <p>
-                        <label for="guests">Number of guests:</label><br>
-                        <input type="number"
-                               id="guests"
-                               name="guests"
-                               min="1"
-                               placeholder="Number of guests"
-                               required>
-                    </p>
 
-                    <p>
-                        <label for="event-type">Event type:</label><br>
-                        <select id="event-type" name="event-type" required>
-                            <option value="">Choose an event</option>
-                            <option value="birthday">Birthday</option>
-                            <option value="wedding">Wedding</option>
-                            <option value="family">Family celebration</option>
-                            <option value="corporate">Corporate event</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </p>
+                        <fieldset class="mb-4">
 
-                    <p>Preferred contact method:</p>
+                            <legend class="h4 mb-3">
+                                Contact Information
+                            </legend>
 
-                    <p>
-                        <input type="radio"
-                               id="contact-phone"
-                               name="contact-method"
-                               value="phone"
-                               required>
-                        <label for="contact-phone">Phone</label>
 
-                        <input type="radio"
-                               id="contact-email"
-                               name="contact-method"
-                               value="email">
-                        <label for="contact-email">Email</label>
-                    </p>
+                            <div class="mb-3">
+                                <label for="full-name"
+                                       class="form-label">
+                                    Full name
+                                </label>
 
-                    <p>
-                        <input type="checkbox"
-                               id="visit"
-                               name="visit">
-                        <label for="visit">
-                            I would like to visit the venue before the event
-                        </label>
-                    </p>
+                                <input type="text"
+                                       class="form-control"
+                                       id="full-name"
+                                       name="full-name"
+                                       placeholder="Your full name"
+                                       required>
+                            </div>
 
-                    <p>
-                        <label for="message">Additional information:</label><br>
-                        <textarea id="message"
-                                  name="message"
-                                  rows="6"
-                                  cols="40"
-                                  placeholder="Tell us about your event"></textarea>
-                    </p>
 
-                </fieldset>
+                            <div class="mb-3">
+                                <label for="email"
+                                       class="form-label">
+                                    Email
+                                </label>
 
-                <p>
-                    <button type="submit">Send Request</button>
-                    <button type="reset">Clear Form</button>
+                                <input type="email"
+                                       class="form-control"
+                                       id="email"
+                                       name="email"
+                                       placeholder="name@example.com"
+                                       required>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="phone"
+                                       class="form-label">
+                                    Phone number
+                                </label>
+
+                                <input type="tel"
+                                       class="form-control"
+                                       id="phone"
+                                       name="phone"
+                                       placeholder="+7 777 000 0000"
+                                       required>
+                            </div>
+
+                        </fieldset>
+
+
+                        <fieldset class="mb-4">
+
+                            <legend class="h4 mb-3">
+                                Event Details
+                            </legend>
+
+
+                            <!-- Nested Bootstrap grid inside the form column. -->
+                            <div class="row g-3">
+
+                                <div class="col-12 col-md-6">
+                                    <label for="event-date"
+                                           class="form-label">
+                                        Preferred date
+                                    </label>
+
+                                    <input type="date"
+                                           class="form-control"
+                                           id="event-date"
+                                           name="event-date"
+                                           required>
+                                </div>
+
+
+                                <div class="col-12 col-md-6">
+                                    <label for="guests"
+                                           class="form-label">
+                                        Number of guests
+                                    </label>
+
+                                    <input type="number"
+                                           class="form-control"
+                                           id="guests"
+                                           name="guests"
+                                           min="1"
+                                           placeholder="Number of guests"
+                                           required>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <label for="event-type"
+                                           class="form-label">
+                                        Event type
+                                    </label>
+
+                                    <select class="form-select"
+                                            id="event-type"
+                                            name="event-type"
+                                            required>
+
+                                        <option value="">
+                                            Choose an event
+                                        </option>
+
+                                        <option value="birthday">
+                                            Birthday
+                                        </option>
+
+                                        <option value="wedding">
+                                            Wedding
+                                        </option>
+
+                                        <option value="family">
+                                            Family celebration
+                                        </option>
+
+                                        <option value="corporate">
+                                            Corporate event
+                                        </option>
+
+                                        <option value="other">
+                                            Other
+                                        </option>
+
+                                    </select>
+                                </div>
+
+
+                                <div class="col-12">
+
+                                    <p class="mb-2">
+                                        Preferred contact method:
+                                    </p>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input"
+                                               type="radio"
+                                               id="contact-phone"
+                                               name="contact-method"
+                                               value="phone"
+                                               required>
+
+                                        <label class="form-check-label"
+                                               for="contact-phone">
+                                            Phone
+                                        </label>
+                                    </div>
+
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input"
+                                               type="radio"
+                                               id="contact-email"
+                                               name="contact-method"
+                                               value="email">
+
+                                        <label class="form-check-label"
+                                               for="contact-email">
+                                            Email
+                                        </label>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-12">
+                                    <div class="form-check">
+
+                                        <input class="form-check-input"
+                                               type="checkbox"
+                                               id="visit"
+                                               name="visit">
+
+                                        <label class="form-check-label"
+                                               for="visit">
+                                            I would like to visit the venue
+                                            before the event
+                                        </label>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <label for="message"
+                                           class="form-label">
+                                        Additional information
+                                    </label>
+
+                                    <textarea class="form-control"
+                                              id="message"
+                                              name="message"
+                                              rows="5"
+                                              placeholder="Tell us about your event"></textarea>
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+
+                        <div class="d-flex flex-wrap gap-2">
+
+                            <button type="submit"
+                                    class="btn btn-primary btn-lg">
+                                Send Request
+                            </button>
+
+                            <button type="reset"
+                                    class="btn btn-outline-secondary">
+                                Clear Form
+                            </button>
+
+                            <!-- Disabled button demonstrates the required
+                                 Bootstrap disabled button state. -->
+                            <button type="button"
+                                    class="btn btn-secondary btn-sm"
+                                    disabled>
+                                Online Confirmation Unavailable
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <aside class="container my-5">
+
+            <div class="alert alert-warning shadow-sm" role="alert">
+
+                <h2 class="h4 alert-heading">
+                    Important
+                </h2>
+
+                <p class="mb-0">
+                    This website does not process real online reservations.
+                    To confirm availability, contact Arai Restaurant
+                    by telephone.
                 </p>
 
-            </form>
-        </section>
+            </div>
 
-        <aside>
-            <h2>Important</h2>
-            <p>
-                This website does not process real online reservations.
-                To confirm availability, contact Arai Restaurant by telephone.
-            </p>
         </aside>
 
     </main>
 
-    <footer id="contact">
 
-        <!-- Contact information is repeated because visitors may enter
-             the website directly through this page. -->
+    <footer id="contact" class="arai-footer py-5">
 
-        <h2>Contact</h2>
+        <div class="container text-center">
 
-        <address>
-            Arai Restaurant<br>
-            133 Satpayev Avenue<br>
-            Satpayev, Ulytau Region, Kazakhstan<br>
-            Phone:
-            <a href="tel:+77774774059">+7 777 477 4059</a>
-        </address>
+            <h2 class="h4">Contact</h2>
 
-        <p>
-            <small>&copy; 2026 Arai Restaurant. All rights reserved.</small>
-        </p>
+            <address class="mb-3">
+                Arai Restaurant<br>
+                133 Satpayev Avenue<br>
+                Satpayev, Ulytau Region, Kazakhstan<br>
+                Phone:
+                <a href="tel:+77774774059">
+                    +7 777 477 4059
+                </a>
+            </address>
+
+            <p class="small mb-0">
+                &copy; 2026 Arai Restaurant.
+                Student project by Balymbetova Dilnaz, SE-2537.
+            </p>
+
+        </div>
 
     </footer>
+
+
+    <!-- Bootstrap 5.3.8 JavaScript bundle is used only
+         for Bootstrap components such as the navbar toggler. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
