@@ -1,0 +1,32 @@
+Assignment 3 - CSS Cleanup
+Balymbetova Dilnaz, SE-2537
+
+1. Removed the custom CSS Grid used for the image gallery.
+   Replaced with Bootstrap .row, responsive .col-* classes and .g-* gutters.
+
+2. Removed the custom Flexbox navigation layout.
+   Replaced with the Bootstrap Navbar component and Bootstrap utilities.
+
+3. Removed most custom margin and padding rules.
+   Replaced with Bootstrap spacing utilities such as .py-5, .mb-4, .mt-2 and .g-4.
+
+4. Removed custom button layout and appearance rules.
+   Replaced with Bootstrap .btn, .btn-primary, .btn-outline-secondary,
+   .btn-lg and .btn-sm classes.
+
+5. Removed custom form control sizing and spacing.
+   Replaced with Bootstrap .form-control, .form-select, .form-label,
+   .form-check and spacing utilities.
+
+6. Removed custom table layout styling.
+   Replaced with Bootstrap .table, .table-striped, .table-bordered
+   and .table-responsive classes.
+
+7. Removed the floated image layout from Assignment 2.
+   Replaced with the Bootstrap responsive grid.
+
+8. Removed fixed-position decorative layout from Assignment 2.
+   It was not required for the Bootstrap version of the website.
+
+The remaining custom CSS is used only for Arai brand colours,
+small image corrections and footer styling.
